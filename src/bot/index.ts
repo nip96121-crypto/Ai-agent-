@@ -11,13 +11,7 @@ bot.catch((err, ctx) => {
     console.error(`Bot Error for ${ctx.updateType}:`, err);
 });
 
-// Faqat admin ruxsatini tekshirish uchun middleware
-bot.use(async (ctx, next) => {
-    if (ctx.from?.id.toString() !== config.adminId) {
-        return await ctx.reply("Kechirasiz, ushbu botdan faqat uning egasi foydalana oladi. 🛑");
-    }
-    return next();
-});
+
 
 bot.start(async (ctx) => {
     const telegramId = ctx.from.id;
