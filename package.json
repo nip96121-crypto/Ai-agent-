@@ -1,0 +1,31 @@
+{
+  "name": "ai-task-bot",
+  "version": "1.0.0",
+  "description": "AI Task Bot with Gemini STT and JSON generation",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "generate": "prisma generate",
+    "push": "prisma db push"
+  },
+  "dependencies": {
+    "@google/genai": "^2.28.0",
+    "@prisma/client": "^5.12.0",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "node-cron": "^3.0.3",
+    "telegraf": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.12.7",
+    "@types/node-cron": "^3.0.11",
+    "prisma": "^5.12.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}
